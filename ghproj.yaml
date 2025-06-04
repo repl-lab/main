@@ -2,7 +2,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghproj/refs/heads/main/json-schema/ghproj.json
 # ghproj https://github.com/suzuki-shunsuke/ghproj
 entries:
-  - project_id: PVT_XXXXXXXXXXXXXXXX
+  # OSS Board
+  - project_id: PVT_kwHOAAGis84A6rEu
     query: |
       is:open
       is:public
@@ -13,8 +14,3 @@ entries:
       (Item.Title != "Dependency Dashboard") &&
       ! (Item.Repo.Name startsWith "homebrew-") &&
       ! (Item.Repo.Name startsWith "test-")
-  # Archive items
-  - action: archive
-    project_id: PVT_XXXXXXXXXXXXXXXX
-    expr: |
-      Item.Repo.IsArchived
