@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghproj/refs/heads/main/json-schema/ghproj.json
+# ghproj https://github.com/suzuki-shunsuke/ghproj
+entries:
+  - project_id: PVT_XXXXXXXXXXXXXXXX
+    query: |
+      is:open
+      is:public
+      archived:false
+      owner:takaishi
+    expr: |
+      (! Item.Repo.IsFork) &&
+      (Item.Title != "Dependency Dashboard") &&
+      ! (Item.Repo.Name startsWith "homebrew-") &&
+      ! (Item.Repo.Name startsWith "test-")
+  # Archive items
+  - action: archive
+    project_id: PVT_XXXXXXXXXXXXXXXX
+    expr: |
+      Item.Repo.IsArchived
