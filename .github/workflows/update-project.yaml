@@ -22,10 +22,10 @@ jobs:
         with:
           aqua_version: v2.51.2
         env:
-          GITHUB_TOKEN: ${{github.token}}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - run: ghproj -v
         env:
-          GITHUB_TOKEN: ${{github.token}}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
       - run: ghproj add
         env:
-          GITHUB_TOKEN: ${{steps.token.outputs.token}}
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
