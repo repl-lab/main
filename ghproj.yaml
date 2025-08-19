@@ -3,7 +3,7 @@
 # ghproj https://github.com/suzuki-shunsuke/ghproj
 entries:
   # OSS Board
-  - project_id: PVT_kwHOAAGis84A6rEu
+  - project_id: PVT_kwDODM3Qh84A6rGA
     query: |
       is:open
       is:public
